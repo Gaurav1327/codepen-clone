@@ -396,7 +396,6 @@ const EditorMain = () => {
       <iframe
         srcDoc={src}
         style={{
-
           marginTop: '8px',
           zIndex: '-1',
           border: "none",

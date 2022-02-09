@@ -46,6 +46,9 @@ export const EditorLayout = styled.div`
     background-color: #363459 !important;
     border: none !important;
   }
+  div.reflex-container {
+    min-height: 40vh !important;
+  }
   .splitter-horizontal {
     height: 10px !important;
     background-color: #363459 !important;
