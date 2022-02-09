@@ -33,7 +33,7 @@ const CodeEditor = (props) => {
   };
   const state = useContext(EditorStateContext);  
 
-  const height = (props.height - 50).toString() + "px !important";
+  const height = "306px !important";
   return (
     <EditorStyles fontSize={state.fontSize} height={height}>
       <ControlledEditor

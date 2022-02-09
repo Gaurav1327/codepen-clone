@@ -11,10 +11,7 @@ import { SolutionMain } from "../styles/EditorLayout";
 
 
 const SolutionLayout = (props) => {
-  const [value, setValue] = React.useState(0);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+
   const useWindowSize = () => {
     const [width, setWidth] = React.useState(undefined);
 
