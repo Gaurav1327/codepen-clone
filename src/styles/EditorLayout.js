@@ -73,6 +73,7 @@ export const SolutionMain = styled.div`
   } */
   .appBar {
     background-color: #363459;
+    height: 48px;
   }
   .MuiTab-root:hover {
     background-color: #947eb0 !important;
@@ -90,7 +91,7 @@ export const SolutionMain = styled.div`
     background-color: #262533;
     position: absolute;
     left: 0;
-    height: 100%;
+    height: 48px;
     border-radius: 0;
   }
   .code-run:hover {

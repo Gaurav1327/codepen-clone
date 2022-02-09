@@ -32,16 +32,16 @@ const SolutionLayout = (props) => {
   return (
     <SolutionMain className={""}>
       <AppBar className={"appBar"} position="static">
-        <Tabs
+        {/* <Tabs
           className={""}
           indicatorColor={"none"}
           value={value}
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <IconButton></IconButton>
+          <IconButton></IconButton> */}
           <Button disabled className="code-run">{props.language}</Button>
-        </Tabs>
+        {/* </Tabs> */}
       </AppBar>
       <Box className={"box"}>
         <CodeEditor
