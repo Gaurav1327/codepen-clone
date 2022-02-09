@@ -32,7 +32,7 @@ const EditorMain = () => {
     <main class="content">
       <div class="feed-grid">
         <div class="card-half wide">
-          <div class="card-img"><span class="label"> <i class="fa fa-star"></i></span><img src="http://a5.files.airows.com/image/upload/c_fit,cs_srgb,w_620/MTM0MjY4NjM0MzY4NTY5MzE0.png" alt="img"/></div>
+          <div class="card-img"><span class="label"> <i class="fa fa-star"></i></span><img src="https://41.media.tumblr.com/7be0a9c6035a5eaaafaddab95a3d77ae/tumblr_mmp17zInpt1qhfgjbo1_540.jpg" alt="img"/></div>
           <div class="card-text">
             <h4>All outdoor & adventure lovers should follow this guy on instagram</h4>
             <p>Just take a look at a few of his shots and try not to want this in your feed regularly.</p>
@@ -334,8 +334,17 @@ const EditorMain = () => {
   }`);
   const [js, setJs] = useState(`/*Let's add some JS*/`);
 
-  const src =  html + "<style>" + css + "</style>" + "<script>" + js + "</script>"
-  
+  const [src, setSrc] = useState("")
+  useEffect(()=>{
+    setSrc(html + "<style>" + css + "</style>" + "<script>" + js + "</script>")
+  }, [])
+  useEffect(()=> {
+    const timeOut = setTimeout(() => {setSrc(html + "<style>" + css + "</style>" + "<script>" + js + "</script>")}
+    ,4000)
+    return () => {
+      clearTimeout(timeOut);
+    };
+  },[html, css, js])
   const onResize = (e) => {
     if (e.domElement) {
       e.domElement.classList.add("resizing");
